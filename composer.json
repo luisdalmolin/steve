@@ -22,7 +22,7 @@
     },
 
     "bin": [
-        "escape"
+        "steve"
     ],
 
     "minimum-stability": "dev"
