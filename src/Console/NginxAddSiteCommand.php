@@ -18,10 +18,10 @@ class NginxAddSiteCommand extends BaseCommand
      */
     protected function configure()
     {
-        $this->setName('nginx:add-site')
+        $this->setName('add-site')
              ->setDescription('Add a new server to Nginx.')
              ->addArgument('server', InputArgument::REQUIRED)
-             ->addArgument('dir', InputArgument::REQUIRED);
+             ->addArgument('dir', InputArgument::OPTIONAL);
     }
 
     /**
@@ -60,6 +60,10 @@ class NginxAddSiteCommand extends BaseCommand
 
     protected function getDir()
     {
-        return str_replace('~', $_SERVER['HOME'], $this->input->getArgument('dir'));
+        if ($dir = $this->input->getArgument('dir')) {
+            return str_replace('~', $_SERVER['HOME'], $this->input->getArgument('dir'));
+        }
+
+        return getcwd();
     }
 }
