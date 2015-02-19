@@ -64,6 +64,6 @@ class NginxAddSiteCommand extends BaseCommand
             return str_replace('~', $_SERVER['HOME'], $this->input->getArgument('dir'));
         }
 
-        return getcwd();
+        return getcwd() . '/public';
     }
 }
