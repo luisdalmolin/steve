@@ -53,7 +53,7 @@ class NginxAddSiteCommand extends BaseCommand
         $this->info(' -> Nginx restarted!');
 
         $this->info('');
-        $this->comment(' -> Your virtual server was created!');
+        $this->comment(' -> Your virtual server was created at ' . $server);
         $this->info('');
         $this->info(' -> Go for it! Go go! You can do this!');
     }
