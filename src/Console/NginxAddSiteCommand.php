@@ -41,6 +41,10 @@ class NginxAddSiteCommand extends BaseCommand
         $stub   = str_replace('{{server}}', $server, $stub);
         $stub   = str_replace('{{dir}}', $this->getDir(), $stub);
 
+        # adding this to vhosts
+        $this->executeCommand('sudo sh -c "echo \''.$server.'\' >> /etc/hosts"');
+        $this->info(' -> ' . $server . ' adicionado nos vhosts!');
+
         # creating the server file
         file_put_contents('/usr/local/etc/nginx/sites-available/' . $server, $stub);
         $this->info(' -> Virtual server ' . $server . ' created!');
