@@ -3,10 +3,7 @@
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Process\Process;
-use Exception;
 
 class NginxAddSiteCommand extends BaseCommand 
 {
@@ -18,7 +15,7 @@ class NginxAddSiteCommand extends BaseCommand
      */
     protected function configure()
     {
-        $this->setName('add-site')
+        $this->setName('add:site')
              ->setDescription('Add a new server to Nginx.')
              ->addArgument('server', InputArgument::REQUIRED)
              ->addArgument('dir', InputArgument::OPTIONAL);
