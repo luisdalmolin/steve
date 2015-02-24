@@ -13,4 +13,5 @@ $app = new Application('Steve - Luís Dalmolin personal Minion', '0.1.0');
 $app->add(new Dalmolin\Console\NginxAddSiteCommand);
 $app->add(new Dalmolin\Console\AddDatabaseCommand);
 $app->add(new Dalmolin\Console\CloneCommand);
+$app->add(new Dalmolin\Console\AddProjectCommand);
 $app->run();
