@@ -34,7 +34,7 @@ class AddProjectCommand extends BaseCommand
 
         # criando o arquivo
         $project = $this->getProjectName();
-        $stub    = file_get_contents("https://gist.githubusercontent.com/luisdalmolin/72127805f91ef6090897/raw/9729b90e0b90ef49c601dee2d11568e18712691e/sublime-project.stub");
+        $stub    = file_get_contents("https://gist.githubusercontent.com/luisdalmolin/72127805f91ef6090897/raw/sublime-project.stub");
         $stub    = str_replace('{{dir}}', getcwd(), $stub);
         $file    = '/Users/luisdalmolin/Projects/sublime/' . $project . '.sublime-project';
         

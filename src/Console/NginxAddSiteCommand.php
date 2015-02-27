@@ -34,7 +34,7 @@ class NginxAddSiteCommand extends BaseCommand
         $this->setOutputInterface($output);
 
         $server = $this->input->getArgument('server');
-        $stub   = file_get_contents('https://gist.githubusercontent.com/luisdalmolin/72127805f91ef6090897/raw/562b177d1163f40ac0e7fd91546d241b4019dd76/site.stub');
+        $stub   = file_get_contents('https://gist.githubusercontent.com/luisdalmolin/72127805f91ef6090897/raw/site.stub');
         $stub   = str_replace('{{server}}', $server, $stub);
         $stub   = str_replace('{{dir}}', $this->getDir(), $stub);
 
