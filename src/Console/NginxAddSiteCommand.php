@@ -57,6 +57,8 @@ class NginxAddSiteCommand extends BaseCommand
         $this->comment(' -> Your virtual server was created at ' . $server);
         $this->info('');
         $this->info(' -> Go for it! Go go! You can do this!');
+
+        $this->executeCommand('open "http://"'. $server);
     }
 
     protected function getDir()
