@@ -58,6 +58,7 @@ class NginxAddSiteCommand extends BaseCommand
         $this->info('');
         $this->info(' -> Go for it! Go go! You can do this!');
 
+        sleep(1);
         $this->executeCommand('open "http://"'. $server);
     }
 
