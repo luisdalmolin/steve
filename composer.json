@@ -22,7 +22,7 @@
     },
 
     "bin": [
-        "steve"
+        "celle"
     ],
 
     "minimum-stability": "dev"
