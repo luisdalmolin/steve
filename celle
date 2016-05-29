@@ -9,7 +9,7 @@ define('BASE_DIR', __DIR__);
 // require BASE_DIR.'/vendor/autoload.php'; # for local testing
 require BASE_DIR.'/../../autoload.php'; # for production
 
-$app = new Application('Steve - Luís Dalmolin personal Minion', '0.1.0');
+$app = new Application('Celle', '0.1.0');
 $app->add(new Dalmolin\Console\NginxAddSiteCommand);
 $app->add(new Dalmolin\Console\AddDatabaseCommand);
 $app->add(new Dalmolin\Console\CloneCommand);

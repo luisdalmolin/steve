@@ -1,4 +1,6 @@
-<?php namespace Dalmolin\Console;
+<?php 
+
+namespace Dalmolin\Console;
 
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
@@ -34,7 +36,7 @@ class AddDatabaseCommand extends BaseCommand
 
         $name = $this->input->getArgument('name');
 
-        $this->executeCommand("echo 'create database `" . $name . "`' | mysql -u root");
+        $this->executeCommand("echo 'create database `" . $name . "`' | mysql -u root -proot");
         $this->info(' -> Database ' . $name . ' successfully created!');
     }
 }
